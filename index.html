@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Card Profile</title>
+    <link rel="stylesheet" href="/CSS Card/Link Card.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.0.0-web/css/all.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+</div>
+<div class="main">
+    <div class="nav">
+        <label for="nav__mobile_input"class="nav__bars-btn"><i class='bx bx-menu'></i>
+        </label>
+        <nav class="nav__PC">
+            <ul class="nav__list">
+                <li>
+                    <a href="" class="nav__link">Home</a>
+                </li>
+                <li>
+                    <a href="" class="nav__link">Hobby</a>
+                </li>
+                <li>
+                    <a href="" class="nav__link">Relax</a>
+                </li>
+                <li>
+                    <a href="" class="nav__link">MyCV</a>
+                </li>
+                <li>
+                    <a href="" class="nav__link">Vlog</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <ul class="menu">
+        <div class="toggle">
+            <ion-icon name="add"></ion-icon>
+        </div>
+        <li style="--i:0;" class="active"><a href="#"><ion-icon name="home"></ion-icon></a></li>
+        <li style="--i:1;"><a href="#"><ion-icon name="person"></ion-icon></a></li>
+        <li style="--i:2;"><a href="#"><ion-icon name="settings"></ion-icon></a></li>
+        <li style="--i:3;"><a href="#"><ion-icon name="mail"></ion-icon></a></li>
+        <li style="--i:4;"><a href="#"><ion-icon name="videocam"></ion-icon></a></li>
+        <li style="--i:5;"><a href="#"><ion-icon name="key"></ion-icon></a></li>
+        <li style="--i:6;"><a href="#"><ion-icon name="logo-game-controller-b"></ion-icon></a></li>
+        <li style="--i:7;"><a href="#"><ion-icon name="camera"></ion-icon></a></li>
+        <div class="indicator"></div>
+     </ul>
+
+    <div class="card">
+        <div class="card-img">
+            <img src="Nam.jpg" alt="">
+        </div>
+        <h1>Hoang Nam</h1>
+        <p>Fullstack Developer</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Nam.Yuu.100"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            
+        </div>
+        <button tell="0945076361">Contact Me</button>
+    </div>
+    <div class="Card">
+        <div class="card__heart">
+            <i class='bx bx-heart'></i>
+        </div>
+        <div class="card__cart">
+            <i class='bx bx-cart-alt' ></i>
+        </div>
+        <div class="card__img">
+            <img src="Nike.png" alt="">
+        </div>
+        <div class="card__title">
+           Nike Zoom KD 12
+        </div>
+        <div class="card__price">
+            $99
+        </div>
+        <div class="card__size">
+            <h3>size:</h3>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+
+        </div>
+        <div class="card__color">
+            <h3>Color:</h3>
+            <span class="card__color-green"></span>
+            <span class="card__color-red"></span>
+            <span class="card__color-black"></span>
+
+        </div>
+        <div class="card__action">
+            <button>Buy Now</button>
+            <button>Add Cart</button>
+        </div>
+    </div>
+    <div class="love">
+        <div class="dlove">
+            <h3>Do you like me?</h3>
+        </div>
+        <div class="love-button">
+            <button>Yes</button>
+            <button id="disagree">No</button>
+        </div>
+    </div>
+</div>
+
+<label for="nav__mobile_input"></label>
+<input type="checkbox" name="" class="nav__input" id="nav__mobile_input">
+<label for="nav__mobile_input"class="nav__overlay"></label>
+<nav class="nav__mobile">
+    <label for="nav__mobile_input" class="nav__mobile-close">
+        
+        <i class='bx bx-window-close' ></i>
+    </label>
+    <ul class="nav__mobile-list">
+        <li>
+            <a href="" class="nav__mobile-link">Home</a>
+        </li>
+        <li>
+            <a href="" class="nav__mobile-link">Hobby</a>
+        </li>
+        <li>
+            <a href="" class="nav__mobile-link">Relax</a>
+        </li>
+        <li>
+            <a href="" class="nav__mobile-link">MyCV</a>
+        </li>
+        <li>
+            <a href="" class="nav__mobile-link">Vlog</a>
+        </li>
+
+    </ul>
+</nav>
+
+
+<script>
+    const btn = document.getElementById("disagree");
+    btn.addEventListener("mouseenter" , () =>{
+        btn.innerText= "Yes";
+    })
+    btn.addEventListener("mouseleave" , () =>{
+        btn.innerText= "No";
+    })
+    let menuToogle = document.querySelector('.toggle');
+    let menu = document.querySelector('.menu');
+    menuToogle.onclick = function (){
+        menu.classList.toggle('active')
+        menuToogle.classList.toggle('active')
+    }
+    const list = document.querySelectorAll('li');
+    function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active')
+    }
+    list.forEach((item) =>
+    item.addEventListener('click',activeLink))
+</script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
