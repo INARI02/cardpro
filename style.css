@@ -334,7 +334,7 @@ img{
     align-items: center;
     margin: 30px auto;
     background: #242628;
-    border-radius: 50%;
+    border-radius: 15px;
     border: 2px solid var(--pramary-color);
 }
 .menu .toggle
